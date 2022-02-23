@@ -67,5 +67,22 @@ public class StartApp {
         int searchNumber = Arrays.binarySearch(arrayNumber, 34); // Поиск числа
         System.out.println("Индекс числа в поиске " + searchNumber);
         System.out.println(Arrays.binarySearch(arrayNumber, 78));
+
+        System.out.println("Задача 1: ");
+        int a = 5;
+        int b = 5;
+        twoNumberSum(a, b);
+    }
+
+//    Написать метод, принимающий на вход два целых числа и проверяющий,
+//    что их сумма лежит в пределах от 10 до 20 (включительно), если да – вернуть true,
+//    в противном случае – false.
+
+    public static boolean twoNumberSum(int a, int b){
+        if ((a+b) >= 10 && (a+b) <= 20){
+            return true;
+        } else {
+            return false;
+        }
     }
 }
