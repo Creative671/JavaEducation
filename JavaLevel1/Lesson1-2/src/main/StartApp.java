@@ -11,11 +11,6 @@ public class StartApp {
         value[0] = 1;
         value[1] = 2;
 
-        /*Вывод массива на экран*/
-        for (int o : value) {
-            System.out.print(o + ", ");
-        }
-
         System.out.println();
 
         /*Массив textNumber*/
@@ -25,5 +20,36 @@ public class StartApp {
         int[] myArray = new int[5];
         System.out.println("Размер массива: " + myArray.length);
 
+        String[] season = new String[4];
+        season[0] = "Winter";
+        season[1] = "Spring";
+        season[2] = "Summer";
+        season[3] = "Autumn";
+
+        /*Вывод массива на экран через цикл foreach*/
+        for (int o : value) {
+            System.out.print(o + ", ");
+        }
+
+        System.out.println();
+
+        /*Вывод массива на экран через цикл for*/
+
+        for (int i = 0; i < season.length; i++){
+            System.out.print(season[i] + ", ");
+        }
+
+        System.out.println();
+
+        /*Двумерный массив*/
+        int[][] arrays = new int[8][8];
+
+        /*Поле из двумерного массива*/
+        for (int i = 0; i < arrays.length; i++){
+            for (int j = 0; j < arrays.length; j++){
+                System.out.print("* ");
+            }
+            System.out.println();
+        }
     }
 }
