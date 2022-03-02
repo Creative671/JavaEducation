@@ -33,6 +33,17 @@ public class AppArrays {
             count = count + 3;
         }
         System.out.println("Полученный массив " + Arrays.toString(b));
-        
+
+//        3. Задать массив [ 1, 5, 3, 2, 11, 4, 5, 2, 4, 8, 9, 1 ] пройти по нему циклом,
+//        и числа меньшие 6 умножить на 2;
+        System.out.println("Задание 3: ");
+        int [] c = {1, 5, 3, 2, 11, 4, 5, 2, 4, 8, 9, 1};
+        System.out.println("Исходный массив " + Arrays.toString(c));
+        for (int i = 0; i < c.length; i++){
+            if (c[i] < 6){
+                c[i] = c[i] * 2;
+            }
+        }
+        System.out.println("Полученный массив: " + Arrays.toString(c));
     }
 }
