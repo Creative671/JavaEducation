@@ -45,5 +45,34 @@ public class AppArrays {
             }
         }
         System.out.println("Полученный массив: " + Arrays.toString(c));
+
+//        4. Создать квадратный двумерный целочисленный массив (количество строк и столбцов одинаковое),
+//        и с помощью цикла(-ов) заполнить его диагональные элементы единицами;
+        System.out.println("Задание 4: ");
+        int[][] arrays = new int[4][4];
+        int count2 = arrays.length - 1; // счётчик для побочной диагонали
+        for (int i = 0; i < arrays.length; i++){
+            for (int j = 0; j < arrays.length; j++){
+                if (i == j) {
+                    arrays[i][j] = 1;
+                } else if (j == count2) {
+                    arrays[i][j] = 1;
+                    count2--;
+                } else {
+                    arrays[i][j] = 0;
+                }
+            }
+        }
+        printArrays(arrays);
+    }
+
+    /*Метод для вывода массива*/
+    public static void printArrays(int [][] arrays){
+        for (int i = 0; i < arrays.length; i++){
+            for (int j = 0; j < arrays.length; j++){
+                System.out.print(arrays[i][j] + " ");
+            }
+            System.out.println();
+        }
     }
 }
