@@ -77,6 +77,34 @@ public class AppArrays {
         int minValueArrays = minValueArrays(taskFourthArrays);
         int maxValueArrays = maxValueArrays(taskFourthArrays);
         System.out.println("min = " + minValueArrays + " max = " + maxValueArrays);
+
+//         ** Написать метод, в который передается не пустой одномерный целочисленный массив,
+//         метод должен вернуть true, если в массиве есть место, в котором сумма левой и правой части массива равны.
+//         Примеры: checkBalance([2, 2, 2, 1, 2, 2, || 10, 1]) → true, checkBalance([1, 1, 1, || 2, 1]) → true, граница показана символами ||, эти символы в массив не входят.
+        System.out.println("Задание 6: ");
+        int [] taskFiveArrays ={1, 1, 1, 2, 1};
+        System.out.println("Массив : " + Arrays.toString(taskFiveArrays));
+        System.out.println(checkBalance(taskFiveArrays));
+    }
+
+    /*Задание 6*/
+    public static boolean checkBalance(int[] arrays){
+        int sum1 = 0;
+        int sum2 = 0;
+        int step = 0;
+        for (int i = 0; i < arrays.length; i++){
+            sum1 = sum1 + arrays[i];
+            step++;
+            for (int j = step; j < arrays.length; j++){
+                sum2 = sum2 + arrays[j];
+            }
+            if (sum1 == sum2){
+                return true;
+            } else {
+                sum2 = 0;
+            }
+        }
+        return false;
     }
 
     /*Метод для вывода массива*/
