@@ -64,6 +64,19 @@ public class AppArrays {
             }
         }
         printArrays(arrays);
+
+//        Задать одномерный массив и найти в нем минимальный и максимальный элементы;
+        System.out.println("Задание 5: ");
+        int [] taskFourthArrays = new int [10];
+        int random = 0;
+        for (int i = 0; i < taskFourthArrays.length; i++){
+            random = (int)(Math.random() * 50);
+            taskFourthArrays[i] = random;
+        }
+        System.out.println(Arrays.toString(taskFourthArrays));
+        int minValueArrays = minValueArrays(taskFourthArrays);
+        int maxValueArrays = maxValueArrays(taskFourthArrays);
+        System.out.println("min = " + minValueArrays + " max = " + maxValueArrays);
     }
 
     /*Метод для вывода массива*/
@@ -74,5 +87,27 @@ public class AppArrays {
             }
             System.out.println();
         }
+    }
+
+    /*Метод для нахождения max значения*/
+    public static int maxValueArrays(int[] arrays){
+        int a = arrays[0];
+        for (int i = 0; i < arrays.length; i++) {
+            if (a <= arrays[i]) {
+                a = arrays[i];
+            }
+        }
+        return a;
+    }
+
+    /*Метод для нахождения min значения*/
+    public static int minValueArrays(int[] arrays){
+        int a = arrays[0];
+        for (int i = 0; i < arrays.length; i++) {
+            if (a >= arrays[i]) {
+                a = arrays[i];
+            }
+        }
+        return a;
     }
 }
