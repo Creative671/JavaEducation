@@ -1,10 +1,10 @@
 public class Employee {
-    private String fio;
-    private String position;
-    private String email;
-    private String number;
-    private int salary;
-    private int age;
+    public String fio;
+    public String position;
+    public String email;
+    public String number;
+    public int salary;
+    public int age;
 
     Employee(String fio, String number){
         this.fio = fio;
@@ -21,39 +21,15 @@ public class Employee {
     }
 
 //    Метод для вывода информации по созданному объкту
-    public static void getInformation(Employee employee){
+    public void getInformation(){
         System.out.println(
-                "ФИО: " + employee.getFio() + "\n" +
-                        "Позиция: " + employee.getPosition() + "\n" +
-                        "Email: " + employee.getEmail() + "\n" +
-                        "Номер телефона: " + employee.getNumber() + "\n" +
-                        "Зарплата: " + employee.getSalary() + "\n" +
-                        "Возраст: " + employee.getAge()
+                "ФИО: " + fio + "\n" +
+                        "Позиция: " + position + "\n" +
+                        "Email: " + email + "\n" +
+                        "Номер телефона: " + number + "\n" +
+                        "Зарплата: " + salary + "\n" +
+                        "Возраст: " + age
         );
         System.out.println();
-    }
-
-    public String getFio() {
-        return fio;
-    }
-
-    public String getPosition() {
-        return position;
-    }
-
-    public String getEmail() {
-        return email;
-    }
-
-    public String getNumber() {
-        return number;
-    }
-
-    public int getSalary() {
-        return salary;
-    }
-
-    public int getAge() {
-        return age;
     }
 }

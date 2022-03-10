@@ -10,8 +10,8 @@ public class StartApp {
 //        Выводим сотрудников старше 40-а лет
 
         for (int i = 0; i < employeeArrays.length; i++){
-            if (employeeArrays[i].getAge() >= 40){
-                Employee.getInformation(employeeArrays[i]);
+            if (employeeArrays[i].age >= 40){
+                employeeArrays[i].getInformation();
             }
         }
     }
