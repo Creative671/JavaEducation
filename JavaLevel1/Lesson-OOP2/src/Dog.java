@@ -1,12 +1,22 @@
-public class Dog extends Animals{
-    String color;
+public class Dog extends Animals {
 
-    Dog(String name, String color){
-        this.name = name;
-        this.color = color;
+    String child;
+
+    Dog(String name, String color, int age) {
+        super(name, color, age);
     }
 
-    public void dogInfo(){
-        System.out.println("Животное: " + name + " цвет: " + color);
+    Dog(String name, String color, int age, String child) {
+        super(name, color, age);
+        this.child = child;
+    }
+
+    Dog(String name) {
+        super(name);
+    }
+
+    @Override
+    void voice() {
+        System.out.println(name + " гавкает");
     }
 }
